@@ -9,7 +9,7 @@ if not os.path.exists(OutputFolder):
 	os.makedirs(OutputFolder)
 
 for filename in os.listdir(ImageArg):
-	img = Image.open(f'{ImageArg}{filename}')
+	img = Image.open(f'{ImageArg}{filename}')#its {ImageArg} because we are assuming the user will type the slash /
 	clean_name = os.path.splitext(filename)[0]
 	img.save(f'{OutputFolder}{clean_name}.png','png')
 	#img.save(f'{ImageArg}{clean_name}.png','png')
